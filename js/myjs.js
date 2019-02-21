@@ -90,4 +90,5 @@ $(function () {
     $('#btn6').click(function () {
         $('#part3').slideUp(500);
     });
+
 });

@@ -1,537 +1,158 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Li Chia-Chen's Web</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8" />
-    <!--Bootstrap Css-->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+    <meta charset="UTF-8">
+    <!-- Bootstrap Css-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon-20181020032848719.ico" type="image/x-icon" />
-</head>
-<style>
-    *{
-        font-family: 'Chakra Petch', sans-serif,Microsoft JhengHei;
-        letter-spacing: 2px;
-        line-height: 1.5;
-        color: #330000;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        -o-user-select: none;
-        user-select: none;
-    }
-    p{
-        font-size: 20px;
-    }
-    body{
-        background-image: url(images/test.jpg);
-    }
-    .navbar{
-        margin: 0;
-    }
-    /*Nav樣式*/
-        .navbar-own {
-        background-color: blanchedalmond;
-        
-    }
-
-    .navbar-own .navbar-brand {
-        color: saddlebrown;
-    }
-
-    .navbar-own .navbar-brand:hover,
-    .navbar-own .navbar-brand:focus {
-        color: #fff;
-        background-color: transparent;
-        transition: 0.5s;
-    }
-
-    .navbar-own .navbar-nav>li>a {
-        color: saddlebrown;
-    }
-
-    .navbar-own .navbar-nav>li>a:hover,
-    .navbar-own .navbar-nav>li>a:focus {
-        color: #fff;
-        background-color: transparent;
-        transition: 0.5s;
-    }
-
-    .navbar-own .navbar-toggle {
-        border-color: saddlebrown;
-    }
-
-    .navbar-own .navbar-toggle:hover,
-    .navbar-own .navbar-toggle:focus {
-        background-color: saddlebrown;
-    }
-
-    .navbar-own .navbar-toggle .icon-bar {
-        background-color: #fff;
-    }
-    .container{
-        margin-bottom: 30px;
-    }
-    .jumbotron{
-        background-image: url(images/tt-01-01.jpg);
-        padding: 260px 0px;
-        background-attachment: fixed;
-    }
-    .jumbotron .col-md-10{
-        background-color: rgba(255,255,255,0.5);
-        padding: 10px 30px;
-        border-radius: 10px;
-    }
-    .jumbotron h1{
-        font-size: 36px;
-    }
-    .own p{
-        text-align: justify;
-        font-size: 20px;
-    }
-    .title{
-        margin-bottom: 50px;
-        border-bottom: solid 2px #330000;
-        border-radius: 10px;
-        padding: 10px;
-        color: #330000;
-    }
-    h3{
-        font-weight: bolder;
-        line-height: 24px;
-        margin: 0;
-    }
-    h3 span{
-        font-size: 14px;
-    }
-    .topbtn{
-        position: fixed;
-        bottom: 50px;
-        right: 30px;
-        display: none;
-    }
-    .topbtn i{
-        color: #330000;
-    }
-
-    .skills{
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 20px;
-    }
-    .box{
-            display: inline-block;
-            width: 70px;
-            height: 70px;
-            border-radius: 5px;
-            text-align: center;
-            box-sizing: border-box;
-            vertical-align: top;
-            line-height: 58px;
-            margin: 4px;
-            }
-    .box1{
-        border: solid 5px #EE781A;
-        background: radial-gradient(circle,#44392E,#1F0F05);
-        color: #EE781A;
-        font-size: 30px;
-    }
-    .box2{
-        border: solid 5px #25BAE2;
-        background: radial-gradient(circle,#292945,#080923);
-        color: #25BAE2;
-        font-size: 30px;
-    }
-    .box3{
-        border: solid 5px #7BBD27;
-        background: radial-gradient(circle,#303A27,#1C0C04);
-        color: #7BBD27;
-        font-size: 30px;
-    }
-    .box4{
-        border: solid 5px #D84B28;
-        background: radial-gradient(circle,#E4632B,#D84B28);
-        color: white;
-        font-size: 20px;
-
-    }
-    .box5{
-        border: solid 5px #036AAD;
-        background: radial-gradient(circle,#319ED0,#036AAD);
-        color: white;
-        font-size: 20px;
-
-    }   
-    .box6{
-        border: solid 5px #E5C02D;
-        background: radial-gradient(circle,#F1D63C,#E5C02D);
-        color: white;
-        font-size: 30px;
-
-    }
-    .box7{
-        border: solid 5px #6E4F9E;
-        background: radial-gradient(circle,#6F389E,#6E4F9E);
-        color: white;
-        font-size: 30px;
-
-    }
-    .boximg{
-            position: relative;
-            z-index: 0;
-            margin-bottom: 30px;
-            animation-name: move2;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-            animation-timing-function: ease-in-out;
-            
-        }
-    .boximg:hover{
-        animation-play-state: paused;
-        
-    }
-    @keyframes move2 {
-            from {
-                transform: scale(0.9);
-                opacity: 0.85;
-            }
-
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-    .bigbox{
-            position: relative;
-            background-color:bisque;
-            width: 250px;
-            height: 320px;
-            margin-right: auto;
-            margin-left: auto;
-            margin-top: -220px;
-            margin-bottom: 30px;
-           padding: 10px 15px;
-            border-radius: 10px;
-            z-index: 999;
-            font-size: 20px;
-            display: none;
-        }
-    .date{
-            position: relative;
-            font-family: Microsoft JhengHei;
-            font-weight: 900;
-                    
-        }
-        .date::after {
-        content: "";
-        position: absolute;
-        background: brown;
-        height: 3px;
-        width: 220px;
-        margin-left: 0px;
-        left: 0px;
-        top:30px;
-   
-        }
-    #contact p{
-        text-align: center;
-    }
-    a:link {
-            text-decoration:none;
-            color: aliceblue;
-        }
-        
-        a:visited {
-            color: saddlebrown;
-            text-decoration:none;
-        }
-        a:hover {
-            text-decoration:none;
-            color: saddlebrown;
-        }
-        a:active{
-            text-decoration:none;
-            color: brown;
-        
-        }
-    
-    footer{
-            background-color: #330000;
-            color: white;
-            margin-top: 30px;
-            height: 50px;
-            text-align: center;
-        }
-    
-    footer p{
-        line-height: 50px;
-        margin: 0px;
-        color: blanchedalmond;
-        }
-    
-    .portimg{
-        width: 300px;
-       height: 350px;
-       overflow: hidden;
-       margin-bottom: 20px;
-        border-radius: 10px;
-        box-shadow: 5px 5px 15px #bbb;
-        transition: 0.5s;
-    }
-    .portimg:hover{
-        transform: scale(1.05);
-    }
-    
-    #portfolio .portText{
-        font-size: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 300px;
-        text-align: justify;
-        margin-bottom: 30px;
-    }
-    
-@media only screen and (max-width: 500px) {
-    .jumbotron{
-/*        padding-top: 100px;*/
-    }
-    .jumbotron .col-md-10{
-        margin-top: 50px;
-    }
-    .jumbotron h1{
-        font-size: 26px;
-    }
-    .own{
-        padding: 0px 20px ;
-        text-align: justify;
-    }
-    p{
-        font-size: 18px;
-    }
-    .title{
-        text-align: center;
-    }
-}
-
-    </style>
-
-<body>
-    <nav class="navbar navbar-own" id="topnav">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Li Chia-Chen's Web</a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-                <ul class="nav navbar-nav navbar">
-                    <li><a href="#about" id="a1">About</a></li>
-                    <li><a href="#experience" id="a2">Experience</a></li>
-                    <li><a href="#portfolio" id="a3">Portfolio</a></li>
-                    <li><a href="#contact" id="a4">Contact</a></li>
-                </ul>
-            </div>
+    <link rel="shortcut icon" href="images/favicon-20181020032848719.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Noto+Sans+TC:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-default" id="topnav">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#">Li Chia-Chen's Web</a>
         </div>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav navbar">
+            <li><a id="a1" href="#about">About</a></li>
+            <li><a id="a2" href="#experience">Experience</a></li>
+            <li><a id="a3" href="#portfolio">Portfolio</a></li>
+            <li><a id="a4" href="#contact">Contact</a></li>
+            <li><a href="file/resume.pdf" download="resume.pdf" target="_blank"> Resume</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <header id="head" class="jumbotron">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-2">
-                    <h1>Hi,I'm Li Chia-Chen.</h1>
-                    <h1>Here's my web,let's take a look...</h1>
-                    <button class="btn btn-warning"><a href="file/resume.pdf" download="resume.pdf" target="_blank">Resume⇩</a></button>
-                </div>
-
-            </div>
-        </div>
-    </header>
-
-    <a id="an1"></a>
     <section id="about">
-        <div class="container">
-            <h2 class="title">About me</h2>
-            <div class="row">
-                <div class="col-md-9 col-md-offset-2">
-                    <div class="own">
-                        <p>我來自台南,為人和善、合群、熱心且認真負責,之前的工作經歷為行政、業務助理、會計人員，每當看到網頁上的特效與良好的介面設計,期望有朝一日能設計與撰寫網頁,於是決定進修關於網頁設計等課程,參加了107年政府辦理的多媒體網頁設計實務班學習，並於9月底結訓,我仍有許多專業知識不足需學習進步,持續進修學習以期望能夠成為獨當一面的前端網頁設計師! </p>
-                        <br>
-                        <h3>My Skills</h3>
-                        <div class="skills">
-                            <div class="box box1">Ai</div>
-                            <div class="box box2">Ps</div>
-                            <div class="box box3">Dw</div>
-                            <div class="box box4">HTML</div>
-                            <div class="box box5">CSS3</div>
-                            <div class="box box6">JS</div>
-                            <div class="box box7">B</div>
-                        </div>
-                        <br>
-                        <p>◆會使用pug與sass加速撰寫網頁速度以及維護管理方便。</p>
-                        <p>◆對於原生JS基礎了解以及jQuery、Bootstrap3簡易應用,具備RWD概念。</p>
-                        <p>◆後續將著手學習前端框架Vue.js、Git版本控制軟體、Adobe Xd...</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="decoration">CREATE</div>
+          <div class="bgcircle circle1"></div>
+          <div class="bgcircle circle2"></div>
+          <div class="bgcircle circle3"></div>
+          <div class="photo"><img class="img-responsive center-block" src="images/myselfcartoon.png"></div><a id="an1"> </a>
+          <div class="col-md-5 space1">
+            <h2 class="line1">About</h2>
+            <p class="innertext">我來自台南,為人和善、合群、熱心且認真負責,之前的工作經歷為行政、業務助理、會計人員，每當看到網頁上的特效與良好的介面設計,期望有朝一日能設計與撰寫網頁,於是決定進修關於網頁設計等課程,參加了107年政府辦理的多媒體網頁設計實務班學習，並於9月底結訓,我仍有許多專業知識不足需學習進步,持續進修學習以期望能夠成為獨當一面的前端網頁設計師!<br><br>◆會使用pug與sass加速撰寫網頁速度以及維護管理方便。<br>◆對於原生JavaScript基礎了解以及jQuery、Bootstrap3簡易應用,具備RWD概念。<br>◆後續將著手學習前端框架Vue.js、Git版本控制軟體、Adobe Xd...</p>
+            <h3>My Skills</h3>
+            <div class="skills">
+              <div class="box box1">Ai</div>
+              <div class="box box2">Ps</div>
+              <div class="box box3">Dw</div>
+              <div class="box box4">HTML</div>
+              <div class="box box5">CSS3</div>
+              <div class="box box6">JS</div>
+              <div class="box box7">B</div>
             </div>
-        </div>
-    </section>
-
-    <a id="an2"></a>
-    <section id="experience">
-        <div class="container">
-            <h2 class="title">Experience</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="boximg">
-                        <img src="images/icon1-01.png" class="img-responsive center-block" id="btn1">
-                        <div class="bigbox" id="part1">
-                            2017/7-2018/6<br>
-                            源想文創股份有限公司
-                            <p class="date">行政兼專案助理</p>
-                            <p>任職於此了解政府標案投標流程，時常與政府窗口和業主溝通聯繫事項並撰寫報告書等細節。</p>
-                            <button type=button class="btn btn-warning center-block" id="btn2">Close</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="boximg">
-                        <img src="images/icon2-01.png" class="img-responsive center-block" id="btn3">
-                        <div class="bigbox" id="part2">
-                            2015/4-2017/2<br>
-                            茶江有限公司
-                            <p class="date">行政兼業務助理</p>
-                            <p>公司為進口貿易商，於此負責管理各購物中心商品上下架、窗口活動聯繫與售後客服等相關事宜。</p>
-                            <button type=button class="btn btn-warning center-block" id="btn4">Close</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="boximg">
-                        <img src="images/icon1-01.png" class="img-responsive center-block" id="btn5">
-                        <div class="bigbox" id="part3">
-                            2014/2-2015/3<br>
-                            自由空間美食餐廳
-                            <p class="date">行政會計</p>
-                            <p>費用預估、控管及報表製作;簡易零用金管理與薪資貨款核算;製作文宣及管理公司官網與粉絲頁。</p>
-                            <button type=button class="btn btn-warning center-block" id="btn6">Close</button>
-                        </div>
-                    </div>
-                </div>
+          </div><a id="an2">  </a>
+          <div class="col-md-5 col-md-offset-2 space2">
+            <h2 class="line2">Experience</h2>
+            <div class="work clearfix">
+              <div class="date">2018/7~2018/9</div>
+              <div class="des">職訓局「107年多媒體網頁設計實務班」錄訓並結業。</div>
             </div>
+            <div class="work"> 
+              <div class="date right">2017/7~2018/6</div>
+              <div class="des">源想文創股份有限公司-行政兼專案助理<br>任職於此了解政府標案投標流程，時常與政府窗口和業主溝通聯繫事項並撰寫報告書等細節。</div>
+            </div>
+            <div class="work">
+              <div class="date">2015/4~2017/2</div>
+              <div class="des">茶江有限公司-行政兼業務助理<br>公司為進口貿易商，於此負責管理各購物中心商品上下架、窗口活動聯繫與售後客服等相關事宜。</div>
+            </div>
+            <div class="work">
+              <div class="date right">2014/2-2015/3</div>
+              <div class="des">自由空間美食餐廳-行政會計<br>費用預估、控管及報表製作;簡易零用金管理與薪資貨款核算;製作文宣及管理公司官網與粉絲頁。</div>
+            </div>
+          </div>
         </div>
-    </section>
-
-    <a id="an3"></a>
+      </div>
+    </section><a id="an3"></a>
     <section id="portfolio">
-        <div class="container">
-            <h2 class="title">Portfolio</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="https://codepen.io/nxwtdhxt/pen/EOYwaX" target="_blank"><img src="images/p1.PNG" class="img-responsive center-block portimg"></a>
-                    <div class="portText">
-                        <p>使用Bootstrap製作的響應式網頁，加CSS動畫增添網頁趣味性。</p>
-                    </div>
-
-                </div>
-                <div class="col-md-4">
-                    <a href="https://codepen.io/nxwtdhxt/pen/rQxPGR" target="_blank"><img src="images/p2.PNG" class="img-responsive center-block portimg"></a>
-                    <div class="portText">
-                        <p>使用Vue.js撰寫的簡易待辦清單，具新增刪除狀態等功能。</p>
-                    </div>
-
-                </div>
-                <div class="col-md-4">
-                    <a href="https://codepen.io/nxwtdhxt/pen/mQWwzJ" target="_blank"><img src="images/p3.PNG" class="img-responsive center-block portimg"></a>
-                    <div class="portText">
-                        <p>使用jQuery的AJAX載入外部資料，搭配Vue.js篩選資料判斷。</p>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="line3">Portfolio</h2>
+        <div class="row">
+          <div class="col-md-4"><a href="https://codepen.io/nxwtdhxt/pen/EOYwaX" target="_blank"><img class="img-responsive center-block portimg" src="images/p1.PNG"></a>
+            <div class="portText">
+              <p>使用Bootstrap製作的響應式網頁，加CSS動畫增添網頁趣味性。</p>
             </div>
+          </div>
+          <div class="col-md-4"><a href="https://codepen.io/nxwtdhxt/pen/rQxPGR" target="_blank"><img class="img-responsive center-block portimg" src="images/p2.PNG"></a>
+            <div class="portText">
+              <p>使用Vue.js撰寫的簡易待辦清單，具新增刪除狀態等功能。</p>
+            </div>
+          </div>
+          <div class="col-md-4"><a href="https://codepen.io/nxwtdhxt/pen/mQWwzJ" target="_blank"><img class="img-responsive center-block portimg" src="images/p3.PNG"></a>
+            <div class="portText">
+              <p>使用jQuery的AJAX載入外部資料，搭配Vue.js篩選資料判斷。</p>
+            </div>
+          </div>
         </div>
-    </section>
-
-    <a id="an4"></a>
+      </div>
+    </section><a id="an4"></a>
     <section id="contact">
-        <div class="container">
-            <h2 class="title">Contact</h2>
-            <div class="row">
-                <div class="col-md-7">
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfxLGv0lV0UQz5nu7ODWRCo2SsjjuZaBEXBG2A_eYrDTdflwQ/formResponse" method="POST" target="_blank" autocomplete="on" class="form-horizontal">
-                        <div class="form-group" style="margin-top: 30px">
-                            <label for="entry_319369118" class="col-md-3 control-lable text-right"></label>
-                            <div class="col-md-6">
-                                <input type="text" name="entry.319369118" value="" class="form-control" id="entry_319369118" dir="auto" aria-label="您的姓名  " aria-required="true" required title="" placeholder="Name">
-                            </div>
-                        </div>
-                        <div class="form-group" style="margin-top: 30px">
-                            <label for="entry_1677375341" class="col-md-3 control-lable text-right"></label>
-                            <div class="col-md-6">
-                                <input type="text" name="entry.1677375341" value="" class="form-control" id="entry_1677375341" dir="auto" aria-label="您的電話  " aria-required="true" required title="" placeholder="Phone">
-                            </div>
-                        </div>
-                        <p></p>
-                        <div class="form-group" style="margin-top: 30px">
-                            <label for="entry_1622854962" class="col-md-3 control-lable text-right"></label>
-                            <div class="col-md-6">
-                                <input type="text" name="entry.1622854962" value="" class="form-control" id="entry_1622854962" dir="auto" aria-label="您的E-mail  " aria-required="true" required title="" placeholder="E-mail">
-                            </div>
-                        </div>
-
-                        <div class="form-group" style="margin-top: 30px">
-                            <label for="entry_1652098099" class="col-md-3 text-right"></label>
-                            <div class="col-md-6">
-                                <textarea name="entry.1652098099" rows="8" cols="0" class="form-control" id="entry_1652098099" dir="auto" aria-label="詢問或建議  " aria-required="true" required placeholder="Content"></textarea>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <div class="row">
-                                <div class="col-md-3"></div>
-                                <div class="col-md-6 text-center">
-                                    <button type="sumbit" class="btn btn-primary">送出</button>
-                                    <span>&nbsp;&nbsp;</span>
-                                    <button type="reset" class="btn btn-danger">清除</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+      <div class="container">
+        <h2 class="line4">Contact</h2>
+        <div class="row">
+          <div class="col-md-7">
+            <form class="form-horizontal" action="https://docs.google.com/forms/d/e/1FAIpQLSfxLGv0lV0UQz5nu7ODWRCo2SsjjuZaBEXBG2A_eYrDTdflwQ/formResponse" method="POST" target="_blank" autocomplete="on">
+              <div class="form-group" style="margin-top: 30px">
+                <label class="col-md-3 control-lable text-right" for="entry_319369118"></label>
+                <div class="col-md-6">
+                  <input class="form-control" id="entry_319369118" type="text" name="entry.319369118" value="" dir="auto" aria-label="您的姓名  " aria-required="true" required="" title="" placeholder="Name">
                 </div>
-                <div class="col-md-5" style="margin-top: 30px">
-                    <img src="images/photo2.jpg" class="img-circle img-responsive center-block">
-                    <p></p>
-                    <p>李佳蓁｜Li Chia-Chen</p>
-                    <p>☎&nbsp;0922671318</p>
-                    <p>✉&nbsp;family1943@gmail.com</p>
+              </div>
+              <div class="form-group" style="margin-top: 30px">
+                <label class="col-md-3 control-lable text-right" for="entry_1677375341"></label>
+                <div class="col-md-6">
+                  <input class="form-control" id="entry_1677375341" type="text" name="entry.1677375341" value="" dir="auto" aria-label="您的電話  " aria-required="true" required="" title="" placeholder="Phone">
                 </div>
-            </div>
-
+              </div>
+              <p></p>
+              <div class="form-group" style="margin-top: 30px">
+                <label class="col-md-3 control-lable text-right" for="entry_1622854962"></label>
+                <div class="col-md-6">
+                  <input class="form-control" id="entry_1622854962" type="text" name="entry.1622854962" value="" dir="auto" aria-label="您的E-mail  " aria-required="true" required="" title="" placeholder="E-mail">
+                </div>
+              </div>
+              <div class="form-group" style="margin-top: 30px">
+                <label class="col-md-3 text-right" for="entry_1652098099"></label>
+                <div class="col-md-6">
+                  <textarea class="form-control" id="entry_1652098099" name="entry.1652098099" rows="8" cols="0" dir="auto" aria-label="詢問或建議  " aria-required="true" required="" placeholder="Content"></textarea>
+                </div>
+              </div>
+              <div class="text-center">
+                <div class="row">
+                  <div class="col-md-3"></div>
+                  <div class="col-md-6 text-center">
+                    <button class="btn btn-primary" type="sumbit">送出</button><span>  </span>
+                    <button class="btn btn-danger" type="reset">清除</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-5" style="margin-top: 30px"><img class="img-circle img-responsive center-block" src="images/myself.jpg"><br>
+            <p class="info">李佳蓁｜Li Chia-Chen<br>☎ 0922671318<br>✉ family1943@gmail.com</p>
+          </div>
         </div>
+      </div>
     </section>
-    <!--底部資訊-->
-
+    <!-- 底部資訊-->
     <footer>
-        <div class="container-fluid">
-            <p>Copyright © 2018 </p>
-            <div class="topbtn" id="top">
-                <a href="#"><i class="fas fa-arrow-circle-up fa-2x"></i></a>
-            </div>
-        </div>
+      <div class="container-fluid">
+        <p>Copyright © 2018 </p>
+        <div class="topbtn" id="top"><a href="#"><i class="fas fa-arrow-circle-up fa-2x"></i></a></div>
+      </div>
     </footer>
-
-
-
-    <!--Bootstrap JS-->
+    <!-- Bootstrap JS-->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/myjs.js"></script>
-</body>
-
+  </body>
 </html>
