@@ -35,7 +35,8 @@ html, body {
   background: -webkit-gradient(linear, left top, left bottom, from(#587850), color-stop(#78b0a0), color-stop(#f8d0b0), to(#709078));
   background: -webkit-linear-gradient(#587850, #78b0a0, #f8d0b0, #709078);
   background: -o-linear-gradient(#587850, #78b0a0, #f8d0b0, #709078);
-  background: linear-gradient(#587850, #78b0a0, #f8d0b0, #709078); }
+  background: linear-gradient(#587850, #78b0a0, #f8d0b0, #709078);
+  overflow-x: hidden; }
 
 .decoration {
   font-size: 300px;
